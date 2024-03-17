@@ -266,6 +266,7 @@ form .btn2{
 
 nav .fas{
     display: none;
+    color: white;
 }
 @media only screen and (max-width:600px){
     #header{
@@ -318,8 +319,8 @@ nav .fas{
 
     .tab-links{
         flex-basis: 100%;
-        font-size: 14px;
-        margin-right: 12px;
+        font-size: 13.5px;
+        margin-right: 10px;
     }
     
     .contact-left,.contact-right{
