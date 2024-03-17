@@ -337,7 +337,7 @@ nav .fas{
 @media (min-width: 601px) and (max-width: 1000px) {
 
     .header-text{
-        margin-top: 30%;
+        margin-top: 20%;
         font-size: 16px;
     }
     .header-text h1{
