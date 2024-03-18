@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
