@@ -134,10 +134,11 @@
             </div>
             <div class="contact-right">
                 <h1 class="sub-title"><span>Get a </span>Quote <span>within 15 minutes</span> <i class="fa-solid fa-hourglass-half"></i></h1>
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message (airport to airport and other details)"></textarea>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="95197775-c9a3-43c3-bcd5-23949b4e3a35">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message (airport to airport and other details)"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="message"></span>
@@ -179,24 +180,6 @@
         sidemenu.style.right = "-200px";
     }
 </script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxrKbqNQwR_d0qCPmUG_yHZ89YmAQMu_WFWnm7OLVq7JU3UT52gs7_UbrlZ9toc1nF9/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const message = document.getElementById("message")
-
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                message.innerHTML = "Message sent successfully!!"
-                setTimeout(function(){
-                    message.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-    })
-    </script>
 
 </body>
 </html>
