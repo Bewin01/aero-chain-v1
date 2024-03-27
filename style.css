@@ -178,6 +178,11 @@ nav ul li a:hover::after{
 
 
 /* --------------------------------contact us-------------- */
+.address span{
+    font-size: 18px;
+    color: #ff3131;
+}
+
 .btn{
     display: block;
     margin: 50px auto;
